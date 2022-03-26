@@ -5,6 +5,8 @@
 #include "DefensiveItem.h"
 #include "HelpfulItem.h"
 
+
+// 1. Constructor
 Character::Character(int hp, int armor_, int attackDamage_ ) :
     hitPoints(hp),
     armor(armor_),
@@ -15,6 +17,7 @@ Character::Character(int hp, int armor_, int attackDamage_ ) :
     initialAttackDamage.reset( new int( attackDamage) );
 }
 
+// 2. attack member function
 void Character::attack( Character& other )
 {
     if( hitPoints <= 0 )
@@ -34,6 +37,7 @@ void Character::attack( Character& other )
     }
 }
 
+// 3. defend member function
 void Character::defend()
 {
     std::cout << getName() << " is defending!!" << std::endl;
@@ -49,6 +53,7 @@ void Character::defend()
     isDefending = true;
 }
 
+// 4. help member function
 void Character::help(Character& other)
 {
     std::cout << getName() << " is going to help " << other.getName() << std::endl;
@@ -63,6 +68,7 @@ void Character::help(Character& other)
     }
 }
 
+// 5. takeDamage member function
 int Character::takeDamage(int damage)
 {
     std::cout << getName() << " is taking " << damage << " damage!" << std::endl;
@@ -86,7 +92,7 @@ int Character::takeDamage(int damage)
     return hitPoints;
 }
 
-
+// 6. attackInternal member function
 #include <cassert>
 void Character::attackInternal(Character& other)
 {
@@ -103,6 +109,7 @@ void Character::attackInternal(Character& other)
     }
 }
 
+// 7. printStats member function
 void Character::printStats()
 {
     std::cout << getName() << "'s stats: " << std::endl;
