@@ -7,6 +7,12 @@ Dwarf::Dwarf(std::string name_, int hp_, int armor_, int attackDamage_) : Charac
     
 }
 
+//Dwarf::~Dwarf
+Dwarf::~Dwarf()
+{
+    
+}
+
 //Dwarf::getName
 const std::string& Dwarf::getName()
 {
