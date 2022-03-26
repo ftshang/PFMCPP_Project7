@@ -13,7 +13,7 @@ struct Character
     Character(int hp, int armor_, int attackDamage_ );
 
     // Virtual Destructor
-    virtual ~Character() { }
+    inline virtual ~Character() { }
     
     /*
      a pure virtual getName function.
