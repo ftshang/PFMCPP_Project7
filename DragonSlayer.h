@@ -1,5 +1,6 @@
 #pragma once
 #include "Character.h"
+#include "AttackItem.h"
 
 struct DragonSlayer : public Character
 {
@@ -18,6 +19,9 @@ public:
 
     // Overriden pure virtual member function getStats
     virtual std::string getStats() override;
+
+protected:
+    std::unique_ptr<Item> attackItemPtr;
 
 private:
     const std::string name;
