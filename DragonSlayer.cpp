@@ -1,11 +1,15 @@
 #include "DragonSlayer.h"
 #include "Dragon.h"
 #include "Utility.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 //DragonSlayer::DragonSlayer
 DragonSlayer::DragonSlayer(std::string name_, int hp_, int armor_, int attackDamage_) : Character(hp_, armor_, attackDamage_), name{name_}
 {
-    
+    // srand(time(NULL));
+    // int num1 = rand() % 10
 }
 
 //DragonSlayer::~DragonSlayer
