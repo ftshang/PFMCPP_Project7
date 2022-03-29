@@ -1,6 +1,4 @@
 #include "DragonSlayer.h"
-#include "Dragon.h"
-#include "Utility.h"
 
 //DragonSlayer::DragonSlayer
 DragonSlayer::DragonSlayer(std::string name_, int hp_, int armor_, int attackDamage_) : Character(hp_, armor_, attackDamage_), name{name_}

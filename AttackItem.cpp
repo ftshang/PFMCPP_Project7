@@ -1,5 +1,4 @@
 #include "AttackItem.h"
-#include "Utility.h"
 
 // AttackItem::AttackItem
 AttackItem::AttackItem() : Item("attack item", 4)
