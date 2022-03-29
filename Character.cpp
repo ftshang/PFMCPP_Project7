@@ -2,6 +2,8 @@
 #include "DefensiveItem.h"
 #include "HelpfulItem.h"
 
+// Free function to update values after killing another character
+void updateValues(int& currentStats, int& initialValue);
 
 // 1. Constructor
 Character::Character(int hp, int armor_, int attackDamage_ ) :
@@ -100,36 +102,10 @@ void Character::attackInternal(Character& other)
             b) your stats are boosted 10%
             c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
       */
+        updateValues(hitPoints, *initialHitPoints);
+        updateValues(armor, *initialArmorLevel);
+        updateValues(attackDamage, *initialAttackDamage);
 
-        // restoring stats to initial values if their initial value is lower than the current values
-        if (hitPoints < *initialHitPoints)
-        {
-            hitPoints = *initialHitPoints;
-        }
-        
-        if (armor < *initialArmorLevel)
-        {
-            armor = *initialArmorLevel;
-        }
-
-        if (attackDamage < *initialAttackDamage)
-        {
-            attackDamage = *initialAttackDamage;
-        }
-
-        // stats get boosted by 10%
-        double hitPointsCopy = hitPoints * 1.10;
-        double armorCopy = armor * 1.10;
-        double attackDamageCopy = attackDamage * 1.10;
-
-        hitPoints = hitPointsCopy;
-        armor = armorCopy;
-        attackDamage = attackDamageCopy;
-
-        *initialHitPoints = hitPoints;
-        *initialArmorLevel = armor;
-        *initialAttackDamage = attackDamage;
-        
         std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        
     }
 }
@@ -145,4 +121,14 @@ void Character::printStats()
     
     std::cout << std::endl;
     std::cout << std::endl;
+}
+
+void updateValues(int& currentStats, int& initialValue)
+{
+    if (currentStats < initialValue)
+    {
+        currentStats = initialValue;
+    }
+    currentStats = currentStats * 1.10;
+    initialValue = currentStats;
 }

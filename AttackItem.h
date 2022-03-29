@@ -2,13 +2,12 @@
 
 struct AttackItem : public Item
 {
-public:
     // Constructor
     AttackItem();
 
     // Destructor
-    virtual ~AttackItem() override;
+    ~AttackItem() override;
 
     // Pure virtual member function
-    virtual void use(Character*) override;
+    void use(Character*) override;
 };

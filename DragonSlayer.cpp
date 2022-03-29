@@ -5,9 +5,6 @@ DragonSlayer::DragonSlayer(std::string name_, int hp_, int armor_, int attackDam
 {
     helpfulItems = makeHelpfulItems(4);
     defensiveItems = makeDefensiveItems(3);
-
-    // Creating an instance of AttackItem on the heap
-    attackItemPtr.reset(new AttackItem);
 }
 
 //DragonSlayer::~DragonSlayer
