@@ -126,9 +126,9 @@ void Character::attackInternal(Character& other)
         double armorCopy = armor * 1.10;
         double attackDamageCopy = attackDamage * 1.10;
 
-        hitPoints = hitPointsCopy;
-        armor = armorCopy;
-        attackDamage = attackDamageCopy;
+        hitPoints = static_cast<int>(hitPointsCopy);
+        armor = static_cast<int>(armorCopy);
+        attackDamage = static_cast<int>(attackDamageCopy);
 
         *initialHitPoints = hitPoints;
         *initialArmorLevel = armor;
