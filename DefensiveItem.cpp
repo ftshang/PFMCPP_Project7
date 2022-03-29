@@ -4,7 +4,6 @@
 #include "DragonSlayer.h"
 #include "Dragon.h"
 #include "Utility.h"
-#include <cassert>
 
 void DefensiveItem::use(Character* character)
 {

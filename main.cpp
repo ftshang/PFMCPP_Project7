@@ -56,7 +56,6 @@ it's very easy to mess this task up.
  */
 
 #include "Item.h"
-#include "Character.h"
 #include "Dwarf.h"
 #include "Paladin.h"
 #include "Dragon.h"

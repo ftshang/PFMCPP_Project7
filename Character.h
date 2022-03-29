@@ -4,7 +4,6 @@
 #include <vector>
 #include <memory>
 #include <iostream>
-
 #include "Item.h"
 
 struct Character

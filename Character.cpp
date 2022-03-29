@@ -93,7 +93,6 @@ int Character::takeDamage(int damage)
 }
 
 // 6. attackInternal member function
-#include <cassert>
 void Character::attackInternal(Character& other)
 {
     if( other.hitPoints <= 0 )
@@ -126,9 +125,9 @@ void Character::attackInternal(Character& other)
         double armorCopy = armor * 1.10;
         double attackDamageCopy = attackDamage * 1.10;
 
-        hitPoints = static_cast<int>(hitPointsCopy);
-        armor = static_cast<int>(armorCopy);
-        attackDamage = static_cast<int>(attackDamageCopy);
+        hitPoints = hitPointsCopy;
+        armor = armorCopy;
+        attackDamage = attackDamageCopy;
 
         *initialHitPoints = hitPoints;
         *initialArmorLevel = armor;

@@ -1,7 +1,6 @@
 #include "DragonSlayer.h"
 #include "Dragon.h"
 #include "Utility.h"
-#include <memory>
 
 //DragonSlayer::DragonSlayer
 DragonSlayer::DragonSlayer(std::string name_, int hp_, int armor_, int attackDamage_) : Character(hp_, armor_, attackDamage_), name{name_}
@@ -25,8 +24,6 @@ const std::string& DragonSlayer::getName()
     return name;
 }
 
-
-#include <cassert>
 void DragonSlayer::attack(Character& other)
 {
     std::cout << name << " is attacking " << other.getName() << " !!" << std::endl;
