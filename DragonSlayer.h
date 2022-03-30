@@ -2,7 +2,7 @@
 #include "Dragon.h"
 #include "AttackItem.h"
 
-struct DragonSlayer : public Character
+struct DragonSlayer : Character
 {
     // Constructor
     DragonSlayer(std::string name_, int hp_, int armor_, int attackDamage_ = 4);

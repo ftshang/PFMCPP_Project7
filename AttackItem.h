@@ -1,6 +1,6 @@
 #include "Utility.h"
 
-struct AttackItem : public Item
+struct AttackItem : Item
 {
     // Constructor
     AttackItem();

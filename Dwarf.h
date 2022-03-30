@@ -1,7 +1,7 @@
 #pragma once
 #include "Character.h"
 
-struct Dwarf : public Character
+struct Dwarf : Character
 {
     // Constructor
     Dwarf(std::string name_, int hp_, int armor_, int attackDamage_ = 4);
