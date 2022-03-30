@@ -36,7 +36,7 @@ it's very easy to mess this task up.
         Use the functions in Utility.h to give each Character (excluding Dragon, because dragons don't carry items) a RANDOM NUMBER of helpful and defensive items: 
             helpfulItems = makeHelpfulItems(2);
             defensiveItems = makeDefensiveItems(1);
-    
+
  7) Dragon Slayers are allowed 1 special item: an AttackItem 
     create a new Item-derived type that boosts the attack damage called AttackItem 
         add an instance of it to the DragonSlayer class
@@ -56,7 +56,6 @@ it's very easy to mess this task up.
  */
 
 #include "Item.h"
-#include "Character.h"
 #include "Dwarf.h"
 #include "Paladin.h"
 #include "Dragon.h"
